@@ -127,7 +127,6 @@ CSE-Newsletter-PDEU_Content-Automation/
 │
 ├── LICENCE
 └── README.md
-    
 ```
 
 ---
