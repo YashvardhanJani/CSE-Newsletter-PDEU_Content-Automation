@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>CSE Newsletter — Goldman Sachs Career Opportunity</title>
+<style>
+  :root {
+    --maroon: #5c1a1a;
+    --maroon-2: #6b2020;
+    --gold: #c8a860;
+    --gold-2: #b8964e;
+    --cream: #fdf6e3;
+    --page-bg: #f5f0dc;
+    --border-gold: #8b6914;
+    --text: #2e1a00;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--page-bg); color: var(--text); font-family: Georgia, "Times New Roman", serif; }
+  body { padding: 20px 12px; }
+  .page {
+    max-width: 900px; margin: 0 auto; background: var(--cream);
+    border: 1px solid #d9c9a3; box-shadow: 0 4px 18px rgba(0,0,0,.08);
+    overflow: hidden;
+  }
+
+  /* HEADER */
+  .header {
+    background: #dfc379; display: flex; align-items: center; gap: 16px;
+    padding: 14px 20px; border-bottom: 2px solid #e6dcc0;
+  }
+  .header .logos-left { display: flex; align-items: center; gap: 10px; flex: 0 0 auto; }
+  .header .logos-left img { height: 64px; width: 64px; object-fit: contain; }
+  .header .center { flex: 1; text-align: center; color: var(--maroon); font-family: Georgia, serif; }
+  .header .center .uni { font-size: 22px; font-weight: 800; letter-spacing: .2px; line-height: 1.1; }
+  .header .center .dept { font-size: 12px; font-weight: 600; margin-top: 4px; color: #6b2020; }
+  .header .center .news { margin-top: 8px; font-size: 18px; font-weight: 900; letter-spacing: 2px; }
+  .header .center .divider { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 4px; color: var(--maroon); }
+  .header .center .divider .line { width: 70px; height: 1px; background: var(--maroon); }
+  .header .center .divider .dia { width: 6px; height: 6px; background: var(--maroon); transform: rotate(45deg); }
+  .header .logo-right img { height: 72px; width: 72px; border-radius: 50%; object-fit: cover; }
+
+  /* CAREER PILL */
+  .career-pill-wrap { display: flex; justify-content: center; padding: 18px 0 14px; background: var(--cream); }
+  .career-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #efe3c4; color: var(--maroon);
+    border: 1px solid #6b3a1a; border-radius: 999px;
+    padding: 8px 20px; font-size: 14px; font-weight: 700;
+    font-family: Georgia, serif;
+  }
+
+  /* GOLDEN CARD */
+  .gold-card {
+    background: var(--gold); margin: 0 18px 18px; padding: 24px 22px 20px;
+    border-radius: 8px;
+  }
+  .company { text-align: center; }
+  .company h1 { margin: 0; color: var(--maroon); font-size: 36px; font-weight: 900; font-family: Georgia, serif; letter-spacing: .5px; }
+  .company .sub { margin-top: 6px; color: #3a1a05; font-size: 15px; font-weight: 600; font-family: Arial, Helvetica, sans-serif; }
+
+  .tags { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 18px 0 16px; }
+  .tag {
+    background: #f1e3bf; border: 1px solid var(--border-gold); color: var(--maroon);
+    border-radius: 999px; padding: 6px 14px; font-size: 12px; font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif; display: inline-flex; align-items: center; gap: 6px;
+  }
+
+  /* INFO GRID */
+  .grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 6px;
+  }
+  .box {
+    background: var(--cream); border-radius: 12px; padding: 18px 16px 14px;
+    min-height: 150px; position: relative;
+    box-shadow: 0 1px 0 rgba(0,0,0,.05);
+  }
+  .box .tab {
+    display: inline-block; background: var(--maroon); color: #fff;
+    font-family: Georgia, serif; font-size: 13px; font-weight: 700;
+    padding: 6px 14px; border-radius: 8px; margin-bottom: 10px;
+    letter-spacing: .3px;
+  }
+  .box p, .box ul { margin: 6px 0 0; font-family: Arial, Helvetica, sans-serif; font-size: 12.5px; line-height: 1.5; color: #2e1a00; }
+  .box ul { padding-left: 18px; }
+
+  /* SKILL CATEGORIES */
+  .skill-category {
+    margin-bottom: 12px;
+  }
+  .skill-category-title {
+    font-size: 11px; font-weight: 700; color: var(--maroon); text-transform: uppercase;
+    letter-spacing: 0.5px; margin-bottom: 6px; padding-bottom: 4px;
+    border-bottom: 1px solid #d9c9a3;
+  }
+  .skill-tags {
+    display: flex; flex-wrap: wrap; gap: 6px;
+  }
+  .skill-tag {
+    background: #f4f0e6; color: var(--maroon); font-size: 11px; font-weight: 600;
+    padding: 4px 10px; border-radius: 6px; border: 1px solid #d9c9a3;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* APPLY + QR */
+  .apply-row {
+    display: grid; grid-template-columns: 1fr auto; gap: 16px;
+    align-items: start; margin-top: 18px;
+  }
+  .apply-block .apply-tab {
+    display: inline-block; background: var(--maroon); color: #fff;
+    padding: 6px 18px; border-radius: 999px; font-family: Georgia, serif;
+    font-size: 13px; font-weight: 700; margin-bottom: 8px;
+  }
+  .apply-block .link {
+    font-family: Arial, Helvetica, sans-serif; font-size: 12.5px; color: #2e1a00;
+    word-break: break-all;
+  }
+  .apply-block .link strong { color: var(--maroon); }
+  .qr {
+    width: 80px; height: 80px; background: #d9d4c5; border: 1px solid #a89c7a;
+    display: flex; align-items: center; justify-content: center;
+    font-family: Arial, sans-serif; font-size: 10px; color: #555; text-align: center;
+    padding: 0; overflow: hidden;
+  }
+  .qr img {
+    width: 100%; height: 100%; object-fit: contain; object-position: center;
+  }
+
+  /* SOCIAL BAR */
+  .social-bar {
+    display: flex; align-items: center; gap: 18px; margin-top: 20px;
+    padding-top: 16px; border-top: 1px dashed rgba(92,26,26,.35);
+    flex-wrap: wrap;
+  }
+  .join-qr { display: flex; align-items: center; gap: 10px; }
+  .join-qr .qr-sm {
+    width: 70px; height: 70px; background: #fff; border: 1px solid #8b6914;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px; color: #5c1a1a; text-align: center; font-family: Arial;
+    padding: 0; overflow: hidden;
+  }
+  .join-qr .qr-sm img {
+    width: 100%; height: 100%; object-fit: contain; object-position: center;
+  }
+  .join-qr .label {
+    writing-mode: vertical-rl; transform: rotate(180deg);
+    font-family: Georgia, serif; font-weight: 700; color: var(--maroon); font-size: 12px;
+  }
+  .social { display: flex; align-items: center; gap: 8px; font-family: Arial, sans-serif; font-size: 12.5px; color: #2e1a00; }
+  .social img { width: 22px; height: 22px; object-fit: contain; }
+
+  /* FOOTER */
+  .footer {
+    background: var(--maroon); color: #fdf6e3; padding: 12px 22px;
+    display: flex; justify-content: space-between; gap: 12px;
+    font-family: Arial, Helvetica, sans-serif; font-size: 12px;
+  }
+  .footer .right { text-align: right; }
+  .footer strong { display: block; font-size: 13px; margin-bottom: 2px; }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { box-shadow: none; border: none; max-width: 100%; }
+    @page { size: A4; margin: 10mm; }
+  }
+  @media (max-width: 640px) {
+    .grid { grid-template-columns: 1fr; }
+    .header { flex-direction: column; text-align: center; }
+    .apply-row { grid-template-columns: 1fr; }
+    .company h1 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logos-left">
+        <img src="assets/Pandit_Deendayal_Energy_University_logo.png" alt="PDEU crest" />
+        <img src="assets/PDEU_SOT.jpeg" alt="School of Technology" />
+      </div>
+      <div class="center">
+        <div class="uni">Pandit Deendayal Energy University</div>
+        <div class="dept">School of Technology &nbsp;|&nbsp; Department of Computer Science &amp; Engineering</div>
+        <div class="news">CSE NEWSLETTER</div>
+        <div class="divider"><span class="line"></span><span class="dia"></span><span class="line"></span></div>
+      </div>
+      <div class="logo-right">
+        <img src="assets/Screenshot_20250820_111818_Instagram.png" alt="CSE Newsletter logo" />
+      </div>
+    </header>
+
+    <!-- CAREER PILL -->
+    <div class="career-pill-wrap">
+      <span class="career-pill">💼 Career Opportunities</span>
+    </div>
+
+    <!-- GOLDEN CARD -->
+    <section class="gold-card">
+      <div class="company">
+        <h1>Goldman Sachs</h1>
+        <div class="sub">Asset &amp; Wealth Management — ACM Engineering — Associate</div>
+      </div>
+
+      <div class="tags">
+        <span class="tag">Full-Stack Engineering</span>
+        <span class="tag">📍 Hyderabad, Telangana, India</span>
+        <span class="tag">Financial Technology</span>
+      </div>
+
+      <div class="grid">
+        <div class="box">
+          <span class="tab">About Goldman Sachs</span>
+          <p>Goldman Sachs is a leading global investment banking, securities, and asset management firm. Founded in 1869, it serves a diverse range of clients including corporations, financial institutions, governments, and individuals worldwide. With a reputation for innovation and excellence in financial services, Goldman Sachs operates at the forefront of global markets.</p>
+        </div>
+        <div class="box">
+          <span class="tab">Job Information</span>
+          <p><strong>Job ID:</strong> 159115<br/>
+          <strong>Role:</strong> Associate — ACM Engineering<br/>
+          <strong>Division:</strong> Asset &amp; Wealth Management<br/>
+          <strong>Location:</strong> Hyderabad, Telangana, India<br/>
+          <strong>Type:</strong> Full-time<br/>
+          <strong>Posting Date:</strong> 12/06/2026, 10:58 AM</p>
+        </div>
+        <div class="box">
+          <span class="tab">Key Responsibilities</span>
+          <ul>
+            <li>Build and maintain Java-based microservices</li>
+            <li>Develop applications using MongoDB</li>
+            <li>Contribute to Angular &amp; React front-end development</li>
+            <li>Work on distributed systems architecture</li>
+            <li>Participate in testing and deployment processes</li>
+            <li>Monitor system performance and reporting</li>
+            <li>Collaborate with global teams and stakeholders</li>
+            <li>Support platform evolution and enhancements</li>
+          </ul>
+        </div>
+        <div class="box">
+          <span class="tab">Eligibility &amp; Skills</span>
+          <div class="skill-category">
+            <div class="skill-category-title">Education</div>
+            <div class="skill-tags">
+              <span class="skill-tag">BTech / MTech in CS</span>
+              <span class="skill-tag">Engineering</span>
+              <span class="skill-tag">Related Field</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category-title">Technical Skills</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Angular</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">Microservices</span>
+              <span class="skill-tag">DevOps</span>
+              <span class="skill-tag">System Design</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category-title">Professional Skills</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Problem-Solving</span>
+              <span class="skill-tag">Analytical Thinking</span>
+              <span class="skill-tag">Documentation</span>
+              <span class="skill-tag">Communication</span>
+              <span class="skill-tag">Team Collaboration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- APPLY -->
+      <div class="apply-row">
+        <div class="apply-block">
+          <div class="apply-tab">Apply</div>
+          <div class="link">🔗 <strong>Link:</strong> https://hdpc.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/LateralHiring/job/159115</div>
+        </div>
+        <div class="qr">
+          <img src="assets/Apply-QR.png" alt="Apply Link QR" />
+        </div>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="social-bar">
+        <div class="join-qr">
+          <div class="qr-sm">
+            <img src="assets/cse-newsletter_CommunityLink.png" alt="WhatsApp Community QR" />
+          </div>
+          <div class="label">Join Now!</div>
+        </div>
+        <div class="social">
+          <img src="assets/instagram.png" alt="Instagram" />
+          <span><b>@csenewsletter.pdeu</b></span>
+        </div>
+        <div class="social">
+          <img src="assets/linkedin.png" alt="LinkedIn" />
+          <span><b>https://www.linkedin.com/company/cse-newsletter-pdeu/</b></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="left">
+        <strong>© 2026 CSE Newsletter Committee, PDEU</strong>
+        Career Opportunities • Learning Resources • Insightful Updates
+      </div>
+      <div class="right">
+        <strong>Pandit Deendayal Energy University</strong>
+        Gandhinagar, Gujarat, India
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
